@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L-System Visualization</title>
+  </head>
+  <body>
+    <main>
+        
+        <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        <h1>L-System Visualization</h1> 
+        <form>
+              <label for="axiom">Axiom</label>
+              <input type="text" name="axiom" value=F>
+            </div>
+            <div>
+                <label for="variables">Variables</label>
+                <input type="text" name="variables" value=0>
+            </div>
+            <div>
+              <label for="angle">Angle</label>
+              <input type="text" name="angle" value=120>
+          </div>
+          <div>
+            <label for="startAngle">Start Angle</label>
+            <input type="text" name="startAngle" value=0>
+        </div>
+          <div>
+            <label for="forwardCharacters">Forward Characters</label>
+            <input type="text" name="forwardCharacters" value=["F","G"]>
+        </div>
+          <div>
+            <label for="rules">Rules</label>
+            <input type="text" name="rules" value={"F":"F-G+F+G-F","G":"GG","-":"-","+":"+"}>
+        </div>
+        <div>
+          <label for="numIterations">Number of Iterations</label>
+          <input type="text" name="numIterations" value=5>
+      </div>
+      <div>
+        <label for="ms">Milliseconds</label>
+        <input type="text" name="ms" value=20>
+    </div>
+              <button type="submit">Submit</button>
+          </form>
+
+        
+
+        
+    </main>
+	<script src="LSystem.js"></script>
+  </body>
+</html>

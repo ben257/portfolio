@@ -1,0 +1,177 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Benjamin Kurland"
+theme = "hugo-profile"
+canonifyURLs = true
+
+[params]
+  title = "Benjamin Kurland"
+  description = "Data Scientist / ML Engineer"
+
+[params.math]
+  enable = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      # Disable Markdown's underscore-to-italic rule
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+[params.hero]
+  enable = false
+  intro = "Hi, I'm"
+  title = "Benjamin Kurland."
+  subtitle = "Data Scientist / Machine Learning Engineer"
+  content = "I have experience with end to end ML systems. This site highlights some of my technical experiences and projects."
+  image = "images/profile.jpeg"
+
+  # ↓ Add these to reduce vertical space
+  height = "20vh"   # default is often ~100vh
+  padding = "2rem"
+
+[params.about]
+  enable = true
+  title = "About Me"
+  image = "images/profile.jpeg"
+  content = """Hi, I'm Ben Kurland. I'm a Data Scientist / Machine Learning Engineer. This site highlights some of my technical experiences and projects."""
+
+ [params.about.skills]
+    enable = false
+    title = "Tech I use"
+    items = ["Python", "pandas", "scikit-learn", "TensorFlow", "PyTorch", "SQL"]
+    # want to add "Docker", "Kubernetes", "Airflow", "GCP", "MLflow"
+
+
+# ---- EXPERIENCE ----
+[params.experience]
+  enable = true
+
+  # Example role 1
+  [[params.experience.items]]
+    job = "Data Scientist"
+    company = "GRA Incorporated"
+    companyUrl = ""
+    date = "April 2024 – Present"
+    content = """Build data pipelines, implement machine learning models, and data visualization tools. Co-authored paper: ['An ASDE-X Based Tool for Surface Delay Measurements'](https://arc.aiaa.org/doi/10.2514/6.2025-3441) (AIAA).
+    """
+  # Example role 2
+  [[params.experience.items]]
+    job = "Research Software Engineer"
+    company = "Composable Analytics"
+    companyUrl = ""
+    date = "Jan 2023 - April 2024"
+    content = "Wrote codebase for end-to-end modeling pipeline including EDA, feature engineering, data set downloading, model training, performance analysis, model explainability, and production performance monitoring"
+
+  # Example role 2
+  [[params.experience.items]]
+    job = "Information Technology Intern"
+    company = "Merck"
+    companyUrl = ""
+    date = "June 2021 - August 2021"
+    content = """Utilized AWS CloudWatch, CloudTrail, Lambda, and QLDB to automate logging of DataSync, DataBrew, QuickSight, and Athena events 
+
+Built a Flask app to visualize the journey of a file through the AWS ecosystem
+
+Ingested time series data into AWS Timestream, using asynchronous Lambda recursion"""
+
+# Example role 2
+  [[params.experience.items]]
+    job = "Sleep Science Researcher"
+    company = "Perelman School of Medicine"
+    companyUrl = ""
+    date = "June 2020 - August 2020"
+    content = """Developed and implemented a sleep spindle detection algorithm
+
+Presented my research to the Penn community
+
+Co-authored paper ['A probabilistic model for the ultradian timing of REM sleep in mice' (PLOS)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009316)"""
+
+# ---- EDUCATION ----
+[params.education]
+  enable = true
+
+  [[params.education.items]]
+    title = "Master of Science, Data Science"
+    school.name = "Johns Hopkins University"
+    school.url = ""
+    date = "August 2021 – December 2022"
+    GPA = "4.0"
+    content = """Relevant Coursework: Algorithms For Data Science, Database Systems, Data Visualization, Neural Networks, Statistical 
+Models and Regression, Computational Statistics, Time Series Analysis, Stochastic Differential Equations"""
+
+  [[params.education.items]]
+    title = "Bachelor of Arts, Major in Mathematics"
+    school.name = "University of Pennsylvania"
+    school.url = ""
+    date = "August 2018 – August 2021"
+    GPA = "Summa Cum Laude"
+    content = """Relevant Coursework: Linear Algebra, Abstract Algebra, Real Analysis, Partial Differential Equations, Probability, Statistical Inference, Simulation and Modeling, Introduction to Computer Programming, Computational Physics"""
+
+
+# ---- Modeling PROJECTS (home page cards) ----
+[params.projects]
+  enable = true
+
+    [[params.projects.items]]
+    title = "Netflix Prize Subsample Competition"
+    content = "SVD + Meta-Learner Solution"
+    type = "modeling"
+    featured.name = "Repo"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/netflix-prize/" },
+  ]
+
+  [[params.projects.items]]
+    title = "Structural Break Detection"
+    content = "Multibranch Recurrent Neural Network"
+    type = "modeling"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/Structural-break/" },
+  ]
+
+    [[params.projects.items]]
+    title = "Radon Prediction"
+    content = "Feedforward Neural Network"
+    type = "modeling"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/radon/" },
+  ]
+
+  [[params.projects.items]]
+  title = "Mandelbrot/Julia Sets"
+  type = "mathviz"
+  links = [
+  { icon = "fas fa-book-open", url = "/math_visualizations/JuliaSets.html" }
+]
+
+  [[params.projects.items]]
+  title = "Newton's Basin"
+  type = "mathviz"
+  links = [
+  { icon = "fas fa-book-open", url = "/math_visualizations/NewtonBasin.html" }
+]
+
+  [[params.projects.items]]
+  title = "Fourier Series"
+  type = "mathviz"
+  links = [
+  { icon = "fas fa-book-open", url = "/math_visualizations/FourierSeries.html" }
+]
+
+  
+
+
+
+[[params.social]]
+  name = "LinkedIn"
+  icon = "linkedin"
+  url  = "https://www.linkedin.com/in/<your-handle>/"
+
+[[params.social]]
+  name = "Email"
+  icon = "mail"
+  url  = "mailto:bkurland@sas.upenn.edu"

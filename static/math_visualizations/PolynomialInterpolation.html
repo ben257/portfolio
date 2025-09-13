@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Linear Regression Visualization</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    </style>
+    
+  <body>
+    <main>
+        
+        <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        <h1>Simple Linear Regression Visualization</h1> 
+        
+        <h3>Coordinate Window</h3> 
+        <table id = "coordinateWindow">
+          <thead>
+            <tr>
+              <th>x Lower</th>
+              <th>x Upper</th>
+              <th>y Lower</th>
+              <th>y Upper</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id = "xLower" contenteditable='true'>-5</td>
+              <td id = "xUpper" contenteditable='true'>5</td>
+              <td id = "yLower" contenteditable='true'>-5</td>
+              <td id = "yUpper" contenteditable='true'>5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Canvas Window</h3> 
+        <table id = "canvasWindow">
+          <thead>
+            <tr>
+              <th>Height</th>
+              <th>Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id ="height" contenteditable='true'>1000</td>
+              <td id ="width" contenteditable='true'>1000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Points</h3> 
+        <table id = "pointsTable">
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>y</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>1</td>
+              <td contenteditable='true'>2</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>2</td>
+              <td contenteditable='true'>3.3</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>3</td>
+              <td contenteditable='true'>4.5</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id = "buttonAddRow" type="button">Add Point</button>
+        <button id = "buttonRemoveRow" type="button">Remove Point</button>
+
+        <p>Degree: <span id="degree"></span></p>
+        <input id = "degreeSlider" type="range" min=0 max=3 value=1>
+        
+        <p>Mean Squared Error: <span id="MSE"></span></p>
+
+        
+        <div>
+          <button id = "buttonSubmit" type="button">Submit</button>
+        </div>
+
+
+
+        
+
+        
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.1/math.js"></script>
+  <script src="index.js"></script>
+  <script src="PolynomialInterpolation.js"></script>
+
+  
+</html>

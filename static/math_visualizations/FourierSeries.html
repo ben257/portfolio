@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fourier Series Visualization</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    </style>
+    
+  <body>
+    <main>
+      <h1>Fourier Series Visualization</h1>
+        
+<canvas 
+  id="Canvas" 
+  width="1000" height="300"
+  style="border:1px solid #000000; width:100%; height:auto;">
+</canvas>
+        <canvas id="Coeff" width="1000" height="300" style="border:1px solid #000000;"></canvas>
+        
+        <h3>Coordinate Window</h3> 
+        <table id = "coordinateWindow">
+          <thead>
+            <tr>
+              <th>x Lower</th>
+              <th>x Upper</th>
+              <th>y Lower</th>
+              <th>y Upper</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id = "xLower" contenteditable='true'>-5</td>
+              <td id = "xUpper" contenteditable='true'>5</td>
+              <td id = "yLower" contenteditable='true'>-5</td>
+              <td id = "yUpper" contenteditable='true'>5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Number of Terms: <span id="numTerms"></span></p>
+        <input id = "numTermsSlider" type="range" min=0 max=100 value=5>
+
+        <p>Period</p>
+        <input id = "period" type="text" value=5>
+
+        <p>Function (e.g., x, Math.sin(x))</p>
+        <input id = "f" type="text" value="x">
+        
+        <div>
+          <button id = "buttonSubmit" type="button">Submit</button>
+        </div>
+
+
+        
+        
+
+        
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  <script src="FourierSeries.js"></script>
+  
+</html>
