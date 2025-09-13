@@ -24,33 +24,29 @@
   <body>
     <main>
       <h1>Fourier Series Visualization</h1>
-        
-<canvas 
-  id="Canvas" 
-  width="1000" height="300"
-  style="border:1px solid #000000; width:100%; height:auto;">
-</canvas>
+
+      <h3>About</h3>
+
+      A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. We visualize the $n^{\text{th}}$ partial sum of the Fourier series, where the sum includes $n$ frequencies. The inputted function is converted to a periodic function, with the inputted period, and approximated by the partial sum.
+
+        The $N^{\text{th}}$ partial sum is given by:
+
+        $f(x) = \frac{a_0}{2} + \sum_{n=1}^{N} \left( a_n \cos(\frac{2 \pi n x}{P}) + b_n \sin(\frac{2 \pi n x}{P}) \right)$
+
+        The coefficients of the Fourier Series are defined by:
+        \begin{align}
+        a_0 &= \frac{1}{P} \int_P f(x) \, dx \\
+        a_n &= \frac{2}{P} \int_P f(x) \cos\left(2\pi \frac{n}{P} x\right) dx, \quad \text{for } n \geq 1 \\
+        b_n &= \frac{2}{P} \int_P f(x) \sin\left(2\pi \frac{n}{P} x\right) dx, \quad \text{for } n \geq 1
+        \end{align}
+
+
+        For even functions, the Fourier series should only consist of even terms, and so the coefficients of the $\sin$ terms, $b_n$ will be zero. And for odd functions, the coefficients of the $cos$ terms, $a_n$ will be zero.
+
+
+        <canvas id="Series" width="1000" height="300" style="border:1px solid #000000;"></canvas>
         <canvas id="Coeff" width="1000" height="300" style="border:1px solid #000000;"></canvas>
         
-        <h3>Coordinate Window</h3> 
-        <table id = "coordinateWindow">
-          <thead>
-            <tr>
-              <th>x Lower</th>
-              <th>x Upper</th>
-              <th>y Lower</th>
-              <th>y Upper</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id = "xLower" contenteditable='true'>-5</td>
-              <td id = "xUpper" contenteditable='true'>5</td>
-              <td id = "yLower" contenteditable='true'>-5</td>
-              <td id = "yUpper" contenteditable='true'>5</td>
-            </tr>
-          </tbody>
-        </table>
 
         <p>Number of Terms: <span id="numTerms"></span></p>
         <input id = "numTermsSlider" type="range" min=0 max=100 value=5>
@@ -64,11 +60,6 @@
         <div>
           <button id = "buttonSubmit" type="button">Submit</button>
         </div>
-
-
-        
-        
-
         
     </main>
   </body>
@@ -77,5 +68,13 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
   <script src="FourierSeries.js"></script>
+
+   <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   
 </html>

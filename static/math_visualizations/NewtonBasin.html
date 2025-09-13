@@ -24,10 +24,21 @@
     
   <body>
     <main>
-        
+
+      <h1>Newton's Basin</h1> 
+
+        Newton's Method is a root finding algorithm. In Newton's Method, the algorithm starts with an initial guess of the root. The function is then approximated by its linear approximation (tangent line) at this point. The next guess is at the linear approximation's root.
+
+        The linear approximation at $x=x_0$ is given by $f(x) \sim f(x_0) + f'(x_0)(x-x_0)$.
+
+        Setting the linear approximation to zero gives the next guess as $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$.
+        <br><br>
+        To create the visualization, we take a polynomial function, defined by the inputted roots, and apply Newton's Method to each point on the grid. Points converging to the same root (i.e. points in the same basin) receive the same color.
+
+        <br><br>
         <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 
-        <h1>Newton's Basin Visualization</h1> 
+        
         <h3>Roots</h3> 
         <table id = "rootsTable">
           <thead>
@@ -65,10 +76,7 @@
 
         <div>
           <button id = "buttonSubmit" type="button">Submit</button>
-        </div>
-    
-        <h3>About</h3>
-        Newton's Method is a root finding algorithm. To create the visualization, we take a polynomial function, defined by the inputted roots, and apply Newton's Method to each point on the grid, treating $(x,y)$ as $z=x+iy$. Points converging to the same root (i.e. points in the same basin) receive the same color.
+        </div>        
 
     </main>
   </body>

@@ -47,8 +47,30 @@
   </head>
   <body>
     <main>
+
+      <h3>Mandelbrot Set Definition</h3>
+          
+      A complex number c is a member of the Mandelbrot set if, when starting with 
+    $z_0 = 0$ and applying the iteration $z_{n+1} = z^2_{n} + c$ repeatedly, the absolute value of $z_{n}$ remains bounded; this point $c$ on the grid is then filled in.
+
+        <h3>Julia Set Definition</h3>
+          
+          A complex number $z_0$ is a member of a Julia set if, when starting with 
+    $z_0$ and applying the iteration $z_{n+1} = z^2_{n} + c$ repeatedly, the absolute value of $z_{n}$ remains bounded. For the Julia set, $c$ is a fixed constant. If the sequence is bounded, with this value of $z_0$, the point $z_0$ is filled in on the grid.
+
+    <p>Some choices of <i>z<sub>0</sub></i> which lead to interesting patterns are:</p>
+    <ul>
+      <li>−0.5125 + 0.5213i</li>
+      <li>0.37 + 0.16i</li>
+      <li>−0.50 − 0.56i</li>
+      <li>−0.25</li>
+      <li>i</li>
+      <li>−1.5</li>
+      <li>−0.75 + 0.25i</li>
+    </ul>
+
+
       <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
-      <h1>Fractal Visualization</h1>
 
       <form id="fractalForm">
         <fieldset>
@@ -80,26 +102,7 @@
         <button type="submit">Submit</button>
       </form>
 
-      <h3>Mandelbrot Set Definition</h3>
       
-      A complex number c is a member of the Mandelbrot set if, when starting with 
-$z_0 = 0$ and applying the iteration $z_{n+1} = z^2_{n} + c repeatedly, the absolute value of $z_{n}$ remains bounded; this point $c$ on the grid is then filled in.
-
-    <h3>Julia Set Definition</h3>
-      
-      A complex number $z_0$ is a member of a Julia set if, when starting with 
-$z_0$ and applying the iteration $z_{n+1} = z^2_{n} + c$ repeatedly, the absolute value of $z_{n}$ remains bounded. For the Julia set, $c$ is a fixed constant. If the sequence is bounded, with this value of $z_0$, the point $z_0$ is filled in on the grid.
-
-<p>Some choices of <i>z<sub>0</sub></i> which lead to interesting patterns are:</p>
-<ul>
-  <li>−0.5125 + 0.5213i</li>
-  <li>0.37 + 0.16i</li>
-  <li>−0.50 − 0.56i</li>
-  <li>−0.25</li>
-  <li>i</li>
-  <li>−1.5</li>
-  <li>−0.75 + 0.25i</li>
-</ul>
 
 
     </main>
