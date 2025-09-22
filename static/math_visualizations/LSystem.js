@@ -63,11 +63,11 @@ function rule_func(s,rule_dict) {
     
 }
 
-function sleep(ms=100) {
+function sleep(ms=10) {
     return new Promise(resolve => setTimeout(resolve, ms));
  }
 
- async function L_system(rule_dict,start,angle,num_iterations,forward_chars = [],angle_0=0,ms=20) {
+ async function L_system(rule_dict,start,angle,num_iterations,forward_chars = [],angle_0=0,ms=.1) {
      
     if (x_lim === null) {
         let windowLimits = get_grid_L_system(rule_dict,start,angle,num_iterations,forward_chars,angle_0);
@@ -99,7 +99,7 @@ function sleep(ms=100) {
             
             
             await sleep(ms)
-            console.log('a')
+            //console.log('a')
             let x_next_canvas = (x_next - x_lim[0])*canvas.width/(x_lim[1]-x_lim[0]);
             let y_next_canvas = (y_next - y_lim[0])*canvas.height/(y_lim[1]-y_lim[0]);
             ctx.lineTo(x_next_canvas, y_next_canvas);
@@ -166,11 +166,33 @@ form.addEventListener('submit', (e) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   x_lim=null;
   y_lim=null;
-  L_system(JSON.parse(obj["rules"]),obj["axiom"],parseInt(obj["angle"])*Math.PI/180,parseInt(obj["numIterations"]),JSON.parse(obj["forwardCharacters"]),parseInt(obj["startAngle"])*Math.PI/180,parseInt(obj["ms"]))
+  console.log(obj["angle"],parseInt(obj["angle"])*1.0*Math.PI/180.0,Math.PI/2);
+  L_system( 
+            rule_dict=JSON.parse(obj["rules"]),
+            start=obj["axiom"],
+            angle=parseInt(obj["angle"])*1.0*Math.PI/180.0,
+            //num_iterations=14,
+            parseInt(obj["numIterations"]),
+            forward_chars=JSON.parse(obj["forwardCharacters"]),
+            angle_0=0)
   
 });
 
-L_system({"F":"F+G","G":"F-G","+":"+","-":"-"},"F",Math.PI/2,15,forward_chars = ["F","G"],angle_0=0)
+/*
+ L_system( rule_dict={"F":"F+G","G":"F-G","+":"+","-":"-"},
+            //JSON.parse(obj["rules"]),
+            start="F",
+            //start=obj["axiom"],
+            angle=Math.PI/2,
+            num_iterations=14,
+            //parseInt(obj["angle"])*Math.PI/180,
+            //parseInt(obj["numIterations"]),
+            forward_chars = ["F","G"],
+            //JSON.parse(obj["forwardCharacters"]),
+            angle_0=0)
+*/
+//L_system({"F":"F+G","G":"F-G","+":"+","-":"-"},"F",Math.PI/2,14,
+//    forward_chars = ["F","G"],angle_0=0)
 
 /*
 let rule_dict = {"F":"F-G+F+G-F","G":"GG","-":"-","+":"+"}; 

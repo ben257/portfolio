@@ -9,6 +9,20 @@
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Autoencoder</title>
+      <link>http://localhost:1313/posts/autoencoder/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/autoencoder/</guid>
+      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;An autoencoder is a type of unsupervised deep learning, where the neural network learns a latent representation of the data. There are two parts of the autoencoder: the encoder and decoder (see architecture below). The encoder maps the input data into a latent space. The decoder tries to recreate the input from the encoded representation. The target the autoencoder is trained on is the input.&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/ae_architecture.png&#34; alt=&#34;alt text&#34; height=&#34;400&#34;&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;reconstructions&#34;&gt;Reconstructions&lt;/h3&gt;&#xA;&lt;p&gt;We train an autoencoder on the MNIST data set, with the dimension of the latent space being 2 to allow us to visualize it. After training for five epochs, we see that the autoencoder is doing a decent job of reconstructing images from the validation set. It is able to recreate digits 1, 7, and 0. However, the autoencoder gets some digits confused; it transforms a 2 into a 3; a 4 into a 9, and a 5 into a 6.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMBD Sentiment Classification</title>
+      <link>http://localhost:1313/posts/imdb/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/imdb/</guid>
+      <description>&lt;h3 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h3&gt;&#xA;&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;&#xA;&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;&#xA;&lt;h3 id=&#34;td-idf&#34;&gt;TD-IDF&lt;/h3&gt;&#xA;&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Netflix Prize Subsample Competition: SVD &#43; Meta-Learner</title>
       <link>http://localhost:1313/posts/netflix-prize/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
@@ -28,6 +42,13 @@
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/structural-break/</guid>
       <description>&lt;h1 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h1&gt;&#xA;&lt;p&gt;The data set was from the &lt;a href=&#34;https://hub.crunchdao.com/competitions/structural-break&#34;&gt;Structural Break Competition&lt;/a&gt; from CrunchDao. The goal of the competition was to identify if a structural break occured in a univariate time series. A structural break is defined as whether a distribution shift occurs after a given boundary point.&lt;/p&gt;&#xA;&lt;p&gt;For example, the figure below has a structural break in 1998 and 2008.&#xA;&lt;br&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/structural_break_example.png&#34; alt=&#34;alt text&#34; width=&#34;400&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The training set contained 10k time series. Each series was labeled with whether a structural break occured, and the index of the potential structural break was identified. The competition metric was ROC AUC (Area Under the Receiver Operating Characteristic Curve).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Variational Autoencoder</title>
+      <link>http://localhost:1313/posts/vae/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vae/</guid>
+      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;While the autoencoder is mostly for compression rather than generation, the variational autoencoder is a generative version which allows probabilistic sampling of the latent space. Unlike the autoencoder, where each image is mapped to a point in the latent space, for the VAE, each image is mapped to a multivariate normal distribution in the latent space, centered around a point. The encoder maps the input to the mean and variance vector of this space. To actually sample a point from the latent space, the equation &lt;code&gt;z = z_mean + z_sigma*epsilon&lt;/code&gt; is used where epsilon is a sample from the standard normal distribution.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

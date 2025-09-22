@@ -8,7 +8,31 @@
   </head>
   <body>
     <main>
+
+        The L-System is a type of formal grammar. It consists of an alphabet of symbols used to form a string, an initial string (axiom), production rules which give the transformation of a symbol from one iteration to the next, , and a way to transform the string into a geometric structure.
         
+        <br><br>
+
+        Consider the following example. 
+
+        The alphabet is "-","+","F","G". The initial string is "F". The production rules are: 
+        <br>
+        
+        $\begin{align}
+F &\rightarrow F+G \\
+G &\rightarrow F-G \\
++ &\rightarrow + \\
+- &\rightarrow -
+\end{align}$
+
+      <br><br>
+
+      These production rules would convert the string "FG-+" to "F+GF-G-+".
+
+      To convert from the string to a geometric structure, the following rules are used. The initial position is at the origin, with an initial angle of 0. If a character is a forward character (F or G), a line is drawn oriented at the current angle, and the current position is now the end of the line. If the character is "+", the angle is rotated counterclockwise. If the character is "-", the angle is rotated clockwise. 
+      
+      <br><br>
+
         <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 
         <h1>L-System Visualization</h1> 
@@ -17,40 +41,35 @@
               <input type="text" name="axiom" value=F>
             </div>
             <div>
-                <label for="variables">Variables</label>
-                <input type="text" name="variables" value=0>
-            </div>
-            <div>
               <label for="angle">Angle</label>
-              <input type="text" name="angle" value=120>
+              <input type="text" name="angle" value=90>
           </div>
-          <div>
-            <label for="startAngle">Start Angle</label>
-            <input type="text" name="startAngle" value=0>
-        </div>
           <div>
             <label for="forwardCharacters">Forward Characters</label>
             <input type="text" name="forwardCharacters" value=["F","G"]>
         </div>
           <div>
             <label for="rules">Rules</label>
-            <input type="text" name="rules" value={"F":"F-G+F+G-F","G":"GG","-":"-","+":"+"}>
+            <input type="text" name="rules" value={"F":"F+G","G":"F-G","+":"+","-":"-"}>
         </div>
         <div>
           <label for="numIterations">Number of Iterations</label>
           <input type="text" name="numIterations" value=5>
       </div>
-      <div>
-        <label for="ms">Milliseconds</label>
-        <input type="text" name="ms" value=20>
-    </div>
-              <button type="submit">Submit</button>
+          <button type="submit">Submit</button>
           </form>
 
         
 
         
     </main>
+      <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 	<script src="LSystem.js"></script>
   </body>
 </html>

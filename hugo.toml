@@ -22,11 +22,11 @@ canonifyURLs = true
         title = true
 
 [params.hero]
-  enable = false
+  enable = true
   intro = "Hi, I'm"
   title = "Benjamin Kurland."
   subtitle = "Data Scientist / Machine Learning Engineer"
-  content = "I have experience with end to end ML systems. This site highlights some of my technical experiences and projects."
+  content = "Hi, I'm Ben Kurland. I'm a Data Scientist / Machine Learning Engineer. This site highlights some of my technical experiences and projects, as well as some things I'm learning."
   image = "images/profile.jpeg"
 
   # ↓ Add these to reduce vertical space
@@ -34,7 +34,7 @@ canonifyURLs = true
   padding = "2rem"
 
 [params.about]
-  enable = true
+  enable = false
   title = "About Me"
   image = "images/profile.jpeg"
   content = """Hi, I'm Ben Kurland. I'm a Data Scientist / Machine Learning Engineer. This site highlights some of my technical experiences and projects."""
@@ -142,6 +142,30 @@ Models and Regression, Computational Statistics, Time Series Analysis, Stochasti
   ]
 
   [[params.projects.items]]
+    title = "IMDB Sentiment Analysis"
+    content = "TD-IDF"
+    type = "modeling"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/imdb/" },
+  ]
+
+    [[params.projects.items]]
+    title = "Autoencoder"
+    content = "Autoencoder"
+    type = "modeling"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/autoencoder/" },
+  ]
+
+  [[params.projects.items]]
+    title = "Variational Autoencoder"
+    content = "Variational Autoencoder"
+    type = "modeling"
+    links = [
+    { icon = "fas fa-book-open", url = "/posts/vae/" },
+  ]
+
+  [[params.projects.items]]
   title = "Mandelbrot/Julia Sets"
   type = "mathviz"
   links = [
@@ -162,14 +186,10 @@ Models and Regression, Computational Statistics, Time Series Analysis, Stochasti
   { icon = "fas fa-book-open", url = "/math_visualizations/FourierSeries.html" }
 ]
 
-  
-
-
-
 [[params.social]]
   name = "LinkedIn"
   icon = "linkedin"
-  url  = "https://www.linkedin.com/in/<your-handle>/"
+  url  = "https://www.linkedin.com/in/ben-kurland-44a4b7217/"
 
 [[params.social]]
   name = "Email"

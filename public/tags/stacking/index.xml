@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/stacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>IMBD Sentiment Classification</title>
+      <link>http://localhost:1313/posts/imdb/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/imdb/</guid>
+      <description>&lt;h3 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h3&gt;&#xA;&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;&#xA;&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;&#xA;&lt;h3 id=&#34;td-idf&#34;&gt;TD-IDF&lt;/h3&gt;&#xA;&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Netflix Prize Subsample Competition: SVD &#43; Meta-Learner</title>
       <link>http://localhost:1313/posts/netflix-prize/</link>
       <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
