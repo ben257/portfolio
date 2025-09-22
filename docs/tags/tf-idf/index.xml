@@ -1,19 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>TF-IDF on Benjamin Kurland</title>
-    <link>http://localhost:1313/tags/tf-idf/</link>
-    <description>Recent content in TF-IDF on Benjamin Kurland</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tf-idf/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>IMBD Sentiment Classification</title>
-      <link>http://localhost:1313/posts/imdb/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/imdb/</guid>
-      <description>&lt;h3 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h3&gt;&#xA;&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;&#xA;&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;&#xA;&lt;h3 id=&#34;td-idf&#34;&gt;TD-IDF&lt;/h3&gt;&#xA;&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TF-IDF on Benjamin Kurland</title><link>https://ben257.github.io/portfolio/tags/tf-idf/</link><description>Recent content in TF-IDF on Benjamin Kurland</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ben257.github.io/portfolio/tags/tf-idf/index.xml" rel="self" type="application/rss+xml"/><item><title>IMBD Sentiment Classification</title><link>https://ben257.github.io/portfolio/posts/imdb/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/imdb/</guid><description>&lt;h3 id="data-set-overview"&gt;Data Set Overview&lt;/h3&gt;
+&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;
+&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;
+&lt;h3 id="td-idf"&gt;TD-IDF&lt;/h3&gt;
+&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description></item></channel></rss>

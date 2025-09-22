@@ -1,40 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Collaborative Filtering on Benjamin Kurland</title>
-    <link>http://localhost:1313/tags/collaborative-filtering/</link>
-    <description>Recent content in Collaborative Filtering on Benjamin Kurland</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/collaborative-filtering/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>IMBD Sentiment Classification</title>
-      <link>http://localhost:1313/posts/imdb/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/imdb/</guid>
-      <description>&lt;h3 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h3&gt;&#xA;&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;&#xA;&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;&#xA;&lt;h3 id=&#34;td-idf&#34;&gt;TD-IDF&lt;/h3&gt;&#xA;&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Netflix Prize Subsample Competition: SVD &#43; Meta-Learner</title>
-      <link>http://localhost:1313/posts/netflix-prize/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/netflix-prize/</guid>
-      <description>&lt;h1 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h1&gt;&#xA;&lt;p&gt;The Netflix Prize was an open competition hosted by Netflix from 2006 to 2009. The problem was to predict a rating of a user for a movie, an example of &lt;em&gt;collaborative filtering&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In the data set used (a sample of the Netflix Prize data set), 85% of user-movie ratings were missing. Ratings were integers between 1 and 5. An additional data set with movie meta data is also used. The test set contained 20,000 user-movie pairs, and the data set contained 7 millon known user-movie rating pairs. There were 400 unique movies and 100k unique users. The evaluation metric was accuracy score.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Radon Activity Competition</title>
-      <link>http://localhost:1313/posts/radon/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/radon/</guid>
-      <description>&lt;h1 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h1&gt;&#xA;&lt;p&gt;The data set comes from &lt;a href=&#34;https://www.tensorflow.org/datasets/catalog/radon&#34;&gt;tensorflow&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The goal of the competition was to predict radon activity, measured in pCi/L. Each observation in the data set is from a house. Key variables include floor which the measurement was taken, whether the house has a basement, and soil uranium level.&#xA;Latitude and longitude of the house are also given.&lt;/p&gt;&#xA;&lt;p&gt;A key problem was encoding radon hotspots. If one location had an extreme amount of radon, it was likely that nearby locations also had high radon levels. In order to encode these hotspots, there were a few approaches to consider. First, you could create an indicator variable for zip code if an observation was in the same zip code as a hotspot. The same could also be done for county. However, these are indicator variables, and by using a hard threshold, the magnitude of radon activity is lost. Moreover, counties and zip codes may differ vastly in size and shape, and didn&amp;rsquo;t seem to be the natural way to encode hotspots. For example, a hotspot on the edge of a zipcode would only count toward its own zip code, and not the immediately adjacent zip code.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Structural Break Detection Competition</title>
-      <link>http://localhost:1313/posts/structural-break/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/structural-break/</guid>
-      <description>&lt;h1 id=&#34;data-set-overview&#34;&gt;Data Set Overview&lt;/h1&gt;&#xA;&lt;p&gt;The data set was from the &lt;a href=&#34;https://hub.crunchdao.com/competitions/structural-break&#34;&gt;Structural Break Competition&lt;/a&gt; from CrunchDao. The goal of the competition was to identify if a structural break occured in a univariate time series. A structural break is defined as whether a distribution shift occurs after a given boundary point.&lt;/p&gt;&#xA;&lt;p&gt;For example, the figure below has a structural break in 1998 and 2008.&#xA;&lt;br&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/structural_break_example.png&#34; alt=&#34;alt text&#34; width=&#34;400&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;The training set contained 10k time series. Each series was labeled with whether a structural break occured, and the index of the potential structural break was identified. The competition metric was ROC AUC (Area Under the Receiver Operating Characteristic Curve).&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Collaborative Filtering on Benjamin Kurland</title><link>https://ben257.github.io/portfolio/tags/collaborative-filtering/</link><description>Recent content in Collaborative Filtering on Benjamin Kurland</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ben257.github.io/portfolio/tags/collaborative-filtering/index.xml" rel="self" type="application/rss+xml"/><item><title>IMBD Sentiment Classification</title><link>https://ben257.github.io/portfolio/posts/imdb/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/imdb/</guid><description>&lt;h3 id="data-set-overview"&gt;Data Set Overview&lt;/h3&gt;
+&lt;p&gt;The IMDB dataset is a data set for binary sentiment classification. It has 50K movie reviews, with 25,000 movie reviews for training and 25,000 for testing.&lt;/p&gt;
+&lt;p&gt;I performed TF-IDF and then perform sentiment classification using the obtained features. We also compare the results to a pretrained Bert model, and then finetune Bert.&lt;/p&gt;
+&lt;h3 id="td-idf"&gt;TD-IDF&lt;/h3&gt;
+&lt;p&gt;After performing tokenization, we apply TF-IDF to the corpus. TF-IDF is a measure of the importance of a word in a document, adjusted for its importance across the corpus. TF-IDF is the product of two statistics: term frequency and inverse document frequency. Term frequency is defined as is the relative frequency of term t within document d:&lt;/p&gt;</description></item><item><title>Netflix Prize Subsample Competition: SVD + Meta-Learner</title><link>https://ben257.github.io/portfolio/posts/netflix-prize/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/netflix-prize/</guid><description>&lt;h1 id="data-set-overview"&gt;Data Set Overview&lt;/h1&gt;
+&lt;p&gt;The Netflix Prize was an open competition hosted by Netflix from 2006 to 2009. The problem was to predict a rating of a user for a movie, an example of &lt;em&gt;collaborative filtering&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In the data set used (a sample of the Netflix Prize data set), 85% of user-movie ratings were missing. Ratings were integers between 1 and 5. An additional data set with movie meta data is also used. The test set contained 20,000 user-movie pairs, and the data set contained 7 millon known user-movie rating pairs. There were 400 unique movies and 100k unique users. The evaluation metric was accuracy score.&lt;/p&gt;</description></item><item><title>Radon Activity Competition</title><link>https://ben257.github.io/portfolio/posts/radon/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/radon/</guid><description>&lt;h1 id="data-set-overview"&gt;Data Set Overview&lt;/h1&gt;
+&lt;p&gt;The data set comes from &lt;a href="https://www.tensorflow.org/datasets/catalog/radon"&gt;tensorflow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The goal of the competition was to predict radon activity, measured in pCi/L. Each observation in the data set is from a house. Key variables include floor which the measurement was taken, whether the house has a basement, and soil uranium level.
+Latitude and longitude of the house are also given.&lt;/p&gt;
+&lt;p&gt;A key problem was encoding radon hotspots. If one location had an extreme amount of radon, it was likely that nearby locations also had high radon levels. In order to encode these hotspots, there were a few approaches to consider. First, you could create an indicator variable for zip code if an observation was in the same zip code as a hotspot. The same could also be done for county. However, these are indicator variables, and by using a hard threshold, the magnitude of radon activity is lost. Moreover, counties and zip codes may differ vastly in size and shape, and didn&amp;rsquo;t seem to be the natural way to encode hotspots. For example, a hotspot on the edge of a zipcode would only count toward its own zip code, and not the immediately adjacent zip code.&lt;/p&gt;</description></item><item><title>Structural Break Detection Competition</title><link>https://ben257.github.io/portfolio/posts/structural-break/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/structural-break/</guid><description>&lt;h1 id="data-set-overview"&gt;Data Set Overview&lt;/h1&gt;
+&lt;p&gt;The data set was from the &lt;a href="https://hub.crunchdao.com/competitions/structural-break"&gt;Structural Break Competition&lt;/a&gt; from CrunchDao. The goal of the competition was to identify if a structural break occured in a univariate time series. A structural break is defined as whether a distribution shift occurs after a given boundary point.&lt;/p&gt;
+&lt;p&gt;For example, the figure below has a structural break in 1998 and 2008.
+&lt;br&gt;
+&lt;img src="https://ben257.github.io/portfolio/images/structural_break_example.png" alt="alt text" width="400"&gt;&lt;/p&gt;
+&lt;p&gt;The training set contained 10k time series. Each series was labeled with whether a structural break occured, and the index of the potential structural break was identified. The competition metric was ROC AUC (Area Under the Receiver Operating Characteristic Curve).&lt;/p&gt;</description></item></channel></rss>

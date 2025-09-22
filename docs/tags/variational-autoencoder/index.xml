@@ -1,19 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Variational Autoencoder on Benjamin Kurland</title>
-    <link>http://localhost:1313/tags/variational-autoencoder/</link>
-    <description>Recent content in Variational Autoencoder on Benjamin Kurland</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/variational-autoencoder/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Variational Autoencoder</title>
-      <link>http://localhost:1313/posts/vae/</link>
-      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vae/</guid>
-      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;While the autoencoder is mostly for compression rather than generation, the variational autoencoder is a generative version which allows probabilistic sampling of the latent space. Unlike the autoencoder, where each image is mapped to a point in the latent space, for the VAE, each image is mapped to a multivariate normal distribution in the latent space, centered around a point. The encoder maps the input to the mean and variance vector of this space. To actually sample a point from the latent space, the equation &lt;code&gt;z = z_mean + z_sigma*epsilon&lt;/code&gt; is used where epsilon is a sample from the standard normal distribution.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Variational Autoencoder on Benjamin Kurland</title><link>https://ben257.github.io/portfolio/tags/variational-autoencoder/</link><description>Recent content in Variational Autoencoder on Benjamin Kurland</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ben257.github.io/portfolio/tags/variational-autoencoder/index.xml" rel="self" type="application/rss+xml"/><item><title>Variational Autoencoder</title><link>https://ben257.github.io/portfolio/posts/vae/</link><pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate><guid>https://ben257.github.io/portfolio/posts/vae/</guid><description>&lt;h3 id="background"&gt;Background&lt;/h3&gt;
+&lt;p&gt;While the autoencoder is mostly for compression rather than generation, the variational autoencoder is a generative version which allows probabilistic sampling of the latent space. Unlike the autoencoder, where each image is mapped to a point in the latent space, for the VAE, each image is mapped to a multivariate normal distribution in the latent space, centered around a point. The encoder maps the input to the mean and variance vector of this space. To actually sample a point from the latent space, the equation &lt;code&gt;z = z_mean + z_sigma*epsilon&lt;/code&gt; is used where epsilon is a sample from the standard normal distribution.&lt;/p&gt;</description></item></channel></rss>
