@@ -1,4 +1,6 @@
-baseURL = "http://localhost:1313/"
+# baseURL = "http://localhost:1313/"
+baseURL = "https://ben257.github.io/portfolio/"
+
 languageCode = "en-us"
 title = "Benjamin Kurland"
 theme = "hugo-profile"
