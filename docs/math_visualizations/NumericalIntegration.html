@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numerical Integration Visualization</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    </style>
+    
+  <body>
+    <main>
+        
+        <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        <h1>Numerical Integration Visualization</h1> 
+        
+        <h3>Coordinate Window</h3> 
+        <table id = "coordinateWindow">
+          <thead>
+            <tr>
+              <th>x Lower</th>
+              <th>x Upper</th>
+              <th>y Lower</th>
+              <th>y Upper</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id = "xLower" contenteditable='true'>-5</td>
+              <td id = "xUpper" contenteditable='true'>5</td>
+              <td id = "yLower" contenteditable='true'>-5</td>
+              <td id = "yUpper" contenteditable='true'>5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Canvas Window</h3> 
+        <table id = "canvasWindow">
+          <thead>
+            <tr>
+              <th>Height</th>
+              <th>Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id ="height" contenteditable='true'>1000</td>
+              <td id ="width" contenteditable='true'>1000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Number of Rectangles: <span id="numRetangles"></span></p>
+        <input id = "numRetanglesSlider" type="range" min=1 max=1000 value=5>
+       
+        <p>Estimated Integral: <span id="IntegralValue"></span></p>
+
+        <label for="integrationMethod">Integration Method:</label>
+
+        <select name="integrationMethod" id="integrationMethod">
+          <option value="MidpointRule">Midpoint Rule</option>
+          <option value="TrapezoidRule">Trapezoid Rule</option>
+        </select>
+
+        <p>Function</p>
+        <input id = "f" type="text" value=".25*x*x">
+        
+        <div>
+          <button id = "buttonSubmit" type="button">Submit</button>
+        </div>
+
+
+
+        
+
+        
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.9.1/math.js"></script>
+  
+    <script src="index.js"></script>
+  <script src="NumericalIntegration.js"></script>
+  
+</html>

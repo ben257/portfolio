@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mandelbrot & Julia Set Visualization</title>
+    <style>
+      fieldset {
+        border: none;
+        margin: 1em 0;
+        padding: 0;
+      }
+      legend {
+        font-weight: bold;
+        margin-bottom: 0.5em;
+      }
+      .radio-group {
+        display: flex;
+        gap: 1.5em;
+        align-items: center;
+      }
+      .radio-group label {
+        margin-left: 0.25em;
+      }
+      .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75em;
+}
+
+.form-group label {
+  width: 160px;      /* fixed label width for alignment */
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 120px;      /* control the input box width */
+  padding: 0.3em;
+  font-size: 1em;
+}
+
+      #coefficients {
+        display: none; /* hidden by default */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <h3>Mandelbrot Set Definition</h3>
+          
+      A complex number c is a member of the Mandelbrot set if, when starting with 
+    $z_0 = 0$ and applying the iteration $z_{n+1} = z^2_{n} + c$ repeatedly, the absolute value of $z_{n}$ remains bounded; this point $c$ on the grid is then filled in.
+
+        <h3>Julia Set Definition</h3>
+          
+          A complex number $z_0$ is a member of a Julia set if, when starting with 
+    $z_0$ and applying the iteration $z_{n+1} = z^2_{n} + c$ repeatedly, the absolute value of $z_{n}$ remains bounded. For the Julia set, $c$ is a fixed constant. If the sequence is bounded, with this value of $z_0$, the point $z_0$ is filled in on the grid.
+
+    <p>Some choices of <i>z<sub>0</sub></i> which lead to interesting patterns are:</p>
+    <ul>
+      <li>−0.5125 + 0.5213i</li>
+      <li>0.37 + 0.16i</li>
+      <li>−0.50 − 0.56i</li>
+      <li>−0.25</li>
+      <li>i</li>
+      <li>−1.5</li>
+      <li>−0.75 + 0.25i</li>
+    </ul>
+
+
+      <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+      <form id="fractalForm">
+        <fieldset>
+          <legend>Fractal Type</legend>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="fractal-mandelbrot" name="fractalType" value="mandelbrot" checked>
+              <label for="fractal-mandelbrot">Mandelbrot</label>
+            </div>
+            <div>
+              <input type="radio" id="fractal-julia" name="fractalType" value="julia">
+              <label for="fractal-julia">Julia Set</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div id="coefficients">
+  <div class="form-group">
+    <label for="realCoefficient">Real coefficient</label>
+    <input type="text" id="realCoefficient" name="realCoefficient" value="0">
+  </div>
+
+  <div class="form-group">
+    <label for="imaginaryCoefficient">Imaginary coefficient</label>
+    <input type="text" id="imaginaryCoefficient" name="imaginaryCoefficient" value="0">
+  </div>
+</div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      
+
+
+    </main>
+
+    <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="index.js"></script>
+    <script src="JuliaSets.js"></script>
+  </body>
+</html>

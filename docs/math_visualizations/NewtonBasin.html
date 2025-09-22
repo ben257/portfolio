@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Newton's Basin Visualization</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+  <body>
+    <main>
+
+      <h1>Newton's Basin</h1> 
+
+        Newton's Method is a root finding algorithm. In Newton's Method, the algorithm starts with an initial guess of the root. The function is then approximated by its linear approximation (tangent line) at this point. The next guess is at the linear approximation's root.
+
+        The linear approximation at $x=x_0$ is given by $f(x) \sim f(x_0) + f'(x_0)(x-x_0)$.
+
+        Setting the linear approximation to zero gives the next guess as $x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$.
+        <br><br>
+        To create the visualization, we take a polynomial function, defined by the inputted roots, and apply Newton's Method to each point on the grid. Points converging to the same root (i.e. points in the same basin) receive the same color.
+
+        <br><br>
+        <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        
+        <h3>Roots</h3> 
+        <table id = "rootsTable">
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>y</th>
+              <th>multiplicity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>-1</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>1</td>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>-1</td>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id = "buttonAddRow" type="button">Add root</button>
+        <button id = "buttonRemoveRow" type="button">Remove root</button>
+
+        <div>
+          <button id = "buttonSubmit" type="button">Submit</button>
+        </div>        
+
+    </main>
+  </body>
+  <script src="index.js"></script>
+  <script src="NewtonBasin.js"></script>
+
+      <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <script src="index.js"></script>
+    <script src="JuliaSets.js"></script>
+  </body>
+</html>
+</html>

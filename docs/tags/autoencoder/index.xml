@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autoencoder on Benjamin Kurland</title>
+    <link>http://localhost:1313/tags/autoencoder/</link>
+    <description>Recent content in Autoencoder on Benjamin Kurland</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/autoencoder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autoencoder</title>
+      <link>http://localhost:1313/posts/autoencoder/</link>
+      <pubDate>Sun, 22 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/autoencoder/</guid>
+      <description>&lt;h3 id=&#34;background&#34;&gt;Background&lt;/h3&gt;&#xA;&lt;p&gt;An autoencoder is a type of unsupervised deep learning, where the neural network learns a latent representation of the data. There are two parts of the autoencoder: the encoder and decoder (see architecture below). The encoder maps the input data into a latent space. The decoder tries to recreate the input from the encoded representation. The target the autoencoder is trained on is the input.&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/ae_architecture.png&#34; alt=&#34;alt text&#34; height=&#34;400&#34;&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;br&gt;&#xD;&#xA;&lt;h3 id=&#34;reconstructions&#34;&gt;Reconstructions&lt;/h3&gt;&#xA;&lt;p&gt;We train an autoencoder on the MNIST data set, with the dimension of the latent space being 2 to allow us to visualize it. After training for five epochs, we see that the autoencoder is doing a decent job of reconstructing images from the validation set. It is able to recreate digits 1, 7, and 0. However, the autoencoder gets some digits confused; it transforms a 2 into a 3; a 4 into a 9, and a 5 into a 6.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
