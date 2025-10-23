@@ -132,7 +132,7 @@ Models and Regression, Computational Statistics, Time Series Analysis, Stochasti
     content = "Multibranch Recurrent Neural Network"
     type = "modeling"
     links = [
-    { icon = "fas fa-book-open", url = "/posts/Structural-break/" },
+    { icon = "fas fa-book-open", url = "/posts/structural-break/" },
   ]
 
     [[params.projects.items]]

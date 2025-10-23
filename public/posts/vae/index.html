@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=http://localhost:1313/fav.png type="image/gif">
+<link rel="icon" href=http://localhost:1313/portfolio/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
 </noscript>
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/font.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="http://localhost:1313/posts/vae/">
+<meta property="og:url" content="http://localhost:1313/portfolio/posts/vae/">
   <meta property="og:site_name" content="Benjamin Kurland">
   <meta property="og:title" content="Variational Autoencoder">
   <meta property="og:description" content="Background While the autoencoder is mostly for compression rather than generation, the variational autoencoder is a generative version which allows probabilistic sampling of the latent space. Unlike the autoencoder, where each image is mapped to a point in the latent space, for the VAE, each image is mapped to a multivariate normal distribution in the latent space, centered around a point. The encoder maps the input to the mean and variance vector of this space. To actually sample a point from the latent space, the equation z = z_mean &#43; z_sigma*epsilon is used where epsilon is a sample from the standard normal distribution.">
@@ -45,11 +45,11 @@
   <meta name="twitter:description" content="Background While the autoencoder is mostly for compression rather than generation, the variational autoencoder is a generative version which allows probabilistic sampling of the latent space. Unlike the autoencoder, where each image is mapped to a point in the latent space, for the VAE, each image is mapped to a multivariate normal distribution in the latent space, centered around a point. The encoder maps the input to the mean and variance vector of this space. To actually sample a point from the latent space, the equation z = z_mean &#43; z_sigma*epsilon is used where epsilon is a sample from the standard normal distribution.">
 
 
-<link rel="stylesheet" href="http://localhost:1313/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="http://localhost:1313/css/header.css" media="all">
-<link rel="stylesheet" href="http://localhost:1313/css/footer.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="http://localhost:1313/portfolio/css/header.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/theme.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/theme.css" media="all">
 
 <style>
     :root {
@@ -107,10 +107,10 @@
 
 
 <meta name="description" content="">
-<link rel="stylesheet" href="http://localhost:1313/css/single.css">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/single.css">
 
 
-<script defer src="http://localhost:1313/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="http://localhost:1313/portfolio/fontawesome-6/all-6.4.2.js"></script>
 
 
   
@@ -152,7 +152,7 @@ Variational Autoencoder | Benjamin Kurland
     <nav class="pt-3 navbar navbar-expand-lg ">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1313/">
+            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1313/portfolio/">
                 
                 Benjamin Kurland
                 
@@ -188,7 +188,7 @@ Variational Autoencoder | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#experience"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#experience"
                             aria-label="experience">
                             Experience
                         </a>
@@ -197,7 +197,7 @@ Variational Autoencoder | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#education"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#education"
                             aria-label="education">
                             Education
                         </a>
@@ -206,7 +206,7 @@ Variational Autoencoder | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#projects"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#projects"
                             aria-label="projects">
                             Projects
                         </a>
@@ -279,18 +279,18 @@ Variational Autoencoder | Benjamin Kurland
 <p>To generate new samples from the VAE, a point can be sampled from the standard multivariate normal distribution, and passed through the decoder.</p>
 <h3 id="results">Results</h3>
 <p>I trained a VAE on the MNIST data set with $\beta=1$. Some observations are that the reconstruction loss is decreasing over the course of training; additionally, the reconstruction loss is an order of magnitude larger than the KL-Divergence loss, so that the training of the VAE will be dominated by the reconstruction loss.</p>
-<img src="http://localhost:1313/images/vae_loss.png" alt="alt text" height="400">
+<img src="http://localhost:1313/portfolio/images/vae_loss.png" alt="alt text" height="400">
 <br><br>
 <p>The the quality of the reconstructed images is similar to the autoencoder in the previous post.
-<img src="http://localhost:1313/images/vae_reconstruction.png" alt="alt text">
+<img src="http://localhost:1313/portfolio/images/vae_reconstruction.png" alt="alt text">
 <br></p>
 <p>However, the latent space follows a normal distribution much more closely than in the case of the autoencoder.</p>
-<img src="http://localhost:1313/images/vae_latent_space_train.png" alt="alt text" height="300">
-<img src="http://localhost:1313/images/vae_latent_space.png" alt="alt text" height="300">
+<img src="http://localhost:1313/portfolio/images/vae_latent_space_train.png" alt="alt text" height="300">
+<img src="http://localhost:1313/portfolio/images/vae_latent_space.png" alt="alt text" height="300">
 <br><br>
 <p>However, when I increase the importance of the KL-Divergence loss by setting $\beta=30$, there is posterior collapse, with the KL-Divergence term dominating the loss. The latent distribution more closely follows a normal distribution than before. However, there is near zero variance, and the generated images are very poor. This $\beta$ reduces the information capacity of the latent space and is too large.</p>
-<img src="http://localhost:1313/images/vae_collapse.png" alt="alt text" height="300">
-<img src="http://localhost:1313/images/vae_collapse_grid.png" alt="alt text" height="300">
+<img src="http://localhost:1313/portfolio/images/vae_collapse.png" alt="alt text" height="300">
+<img src="http://localhost:1313/portfolio/images/vae_collapse_grid.png" alt="alt text" height="300">
 <br>
 <script>
 window.MathJax = {
@@ -329,7 +329,7 @@ window.MathJax = {
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/variational-autoencoder"
+              <li class="list-inline-item"><a href="http://localhost:1313/portfolio/tags/variational-autoencoder"
                 target="_blank"
               >Variational Autoencoder</a></li>
               
@@ -343,22 +343,22 @@ window.MathJax = {
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fvae%2f">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fvae%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Variational%20Autoencoder&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fvae%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Variational%20Autoencoder&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fvae%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Variational%20Autoencoder: http%3a%2f%2flocalhost%3a1313%2fposts%2fvae%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Variational%20Autoencoder: http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fvae%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Variational%20Autoencoder&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2fvae%2f'>
+                  <a target="_blank" href='mailto:?subject=Variational%20Autoencoder&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fvae%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -384,7 +384,7 @@ window.MathJax = {
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="http://localhost:1313/js/scrollProgressBar.js"></script>
+<Script src="http://localhost:1313/portfolio/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -417,7 +417,7 @@ window.MathJax = {
 </script>
 
 
-<script src="http://localhost:1313/js/readingTime.js"></script>
+<script src="http://localhost:1313/portfolio/js/readingTime.js"></script>
 
 
 
@@ -454,7 +454,7 @@ window.MathJax = {
         </div>
     </div>
 </div>
-</footer><script src="http://localhost:1313/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</footer><script src="http://localhost:1313/portfolio/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -484,7 +484,7 @@ window.MathJax = {
 </script>
 
 
-    <script src="http://localhost:1313/js/search.js"></script>
+    <script src="http://localhost:1313/portfolio/js/search.js"></script>
 
 
 

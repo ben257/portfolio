@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=http://localhost:1313/fav.png type="image/gif">
+<link rel="icon" href=http://localhost:1313/portfolio/fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
 </noscript>
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/font.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/font.css" media="all">
 
 
 
-<meta property="og:url" content="http://localhost:1313/posts/structural-break/">
+<meta property="og:url" content="http://localhost:1313/portfolio/posts/structural-break/">
   <meta property="og:site_name" content="Benjamin Kurland">
   <meta property="og:title" content="Structural Break Detection Competition">
   <meta property="og:description" content="Data Set Overview The data set was from the Structural Break Competition from CrunchDao. The goal of the competition was to identify if a structural break occured in a univariate time series. A structural break is defined as whether a distribution shift occurs after a given boundary point.
@@ -50,11 +50,11 @@ For example, the figure below has a structural break in 1998 and 2008. The train
 For example, the figure below has a structural break in 1998 and 2008. The training set contained 10k time series. Each series was labeled with whether a structural break occured, and the index of the potential structural break was identified. The competition metric was ROC AUC (Area Under the Receiver Operating Characteristic Curve).">
 
 
-<link rel="stylesheet" href="http://localhost:1313/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="http://localhost:1313/css/header.css" media="all">
-<link rel="stylesheet" href="http://localhost:1313/css/footer.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="http://localhost:1313/portfolio/css/header.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/theme.css" media="all">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/theme.css" media="all">
 
 <style>
     :root {
@@ -112,10 +112,10 @@ For example, the figure below has a structural break in 1998 and 2008. The train
 
 
 <meta name="description" content="">
-<link rel="stylesheet" href="http://localhost:1313/css/single.css">
+<link rel="stylesheet" href="http://localhost:1313/portfolio/css/single.css">
 
 
-<script defer src="http://localhost:1313/fontawesome-6/all-6.4.2.js"></script>
+<script defer src="http://localhost:1313/portfolio/fontawesome-6/all-6.4.2.js"></script>
 
 
   
@@ -157,7 +157,7 @@ Structural Break Detection Competition | Benjamin Kurland
     <nav class="pt-3 navbar navbar-expand-lg ">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1313/">
+            <a class="navbar-brand primary-font text-wrap" href="http://localhost:1313/portfolio/">
                 
                 Benjamin Kurland
                 
@@ -193,7 +193,7 @@ Structural Break Detection Competition | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#experience"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#experience"
                             aria-label="experience">
                             Experience
                         </a>
@@ -202,7 +202,7 @@ Structural Break Detection Competition | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#education"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#education"
                             aria-label="education">
                             Education
                         </a>
@@ -211,7 +211,7 @@ Structural Break Detection Competition | Benjamin Kurland
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link" href="http://localhost:1313/#projects"
+                        <a class="nav-link" href="http://localhost:1313/portfolio/#projects"
                             aria-label="projects">
                             Projects
                         </a>
@@ -282,7 +282,7 @@ Structural Break Detection Competition | Benjamin Kurland
 <p>The data set was from the <a href="https://hub.crunchdao.com/competitions/structural-break">Structural Break Competition</a> from CrunchDao. The goal of the competition was to identify if a structural break occured in a univariate time series. A structural break is defined as whether a distribution shift occurs after a given boundary point.</p>
 <p>For example, the figure below has a structural break in 1998 and 2008.
 <br>
-<img src="http://localhost:1313/images/structural_break_example.png" alt="alt text" width="400"></p>
+<img src="http://localhost:1313/portfolio/images/structural_break_example.png" alt="alt text" width="400"></p>
 <p>The training set contained 10k time series. Each series was labeled with whether a structural break occured, and the index of the potential structural break was identified. The competition metric was ROC AUC (Area Under the Receiver Operating Characteristic Curve).</p>
 <h1 id="feature-engineering">Feature Engineering</h1>
 <p>A challenge of this data set was that the data was not in tabular format used by traditional machine learning models. Therefore, we needed to engineer features to aggregate the time series into tabular format.</p>
@@ -311,7 +311,7 @@ tree)</li>
 <h1 id="model-2-neural-network">Model 2 (Neural Network)</h1>
 <p>The above engineered features were missing key information present in the original sequences, since they were just aggregations. A multibranch recurrent neural network architecture was therefore tried. This architecture had three input branches: the sequence preceding the potential break; the sequence following the potential break; and the previously engineered statistical features. These branches would then be combined and passed to a final dense layer with sigmoid activation function for classification. This deep learning model had a 1% boost in accuracy compared to the XGBoost model.
 <br>
-<img src="http://localhost:1313/images/model_architecture.png" alt="alt text" width="700"></p>
+<img src="http://localhost:1313/portfolio/images/model_architecture.png" alt="alt text" width="700"></p>
 <h3 id="references">References</h3>
 <ol>
 <li>Bai, J., &amp; Perron, P. (1998). Estimating and testing linear models with multiple structural changes. Econometrica, 66(1), 47-78. <a href="https://www.jstor.org/stable/2998540">https://www.jstor.org/stable/2998540</a></li>
@@ -365,19 +365,19 @@ window.MathJax = {
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/recsys"
+              <li class="list-inline-item"><a href="http://localhost:1313/portfolio/tags/recsys"
                 target="_blank"
               >recsys</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/svd"
+              <li class="list-inline-item"><a href="http://localhost:1313/portfolio/tags/svd"
                 target="_blank"
               >SVD</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/stacking"
+              <li class="list-inline-item"><a href="http://localhost:1313/portfolio/tags/stacking"
                 target="_blank"
               >stacking</a></li>
               
-              <li class="list-inline-item"><a href="http://localhost:1313/tags/collaborative-filtering"
+              <li class="list-inline-item"><a href="http://localhost:1313/portfolio/tags/collaborative-filtering"
                 target="_blank"
               >collaborative filtering</a></li>
               
@@ -391,22 +391,22 @@ window.MathJax = {
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fstructural-break%2f">
+                  <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fstructural-break%2f">
                     <i class="fab fa-linkedin"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=Structural%20Break%20Detection%20Competition&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fstructural-break%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Structural%20Break%20Detection%20Competition&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fstructural-break%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=Structural%20Break%20Detection%20Competition: http%3a%2f%2flocalhost%3a1313%2fposts%2fstructural-break%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Structural%20Break%20Detection%20Competition: http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fstructural-break%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href='mailto:?subject=Structural%20Break%20Detection%20Competition&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fposts%2fstructural-break%2f'>
+                  <a target="_blank" href='mailto:?subject=Structural%20Break%20Detection%20Competition&amp;body=Check%20out%20this%20site http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fstructural-break%2f'>
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
@@ -432,7 +432,7 @@ window.MathJax = {
 <div class="progress">
   <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<Script src="http://localhost:1313/js/scrollProgressBar.js"></script>
+<Script src="http://localhost:1313/portfolio/js/scrollProgressBar.js"></script>
 
 
 <script>
@@ -465,7 +465,7 @@ window.MathJax = {
 </script>
 
 
-<script src="http://localhost:1313/js/readingTime.js"></script>
+<script src="http://localhost:1313/portfolio/js/readingTime.js"></script>
 
 
 
@@ -502,7 +502,7 @@ window.MathJax = {
         </div>
     </div>
 </div>
-</footer><script src="http://localhost:1313/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</footer><script src="http://localhost:1313/portfolio/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -532,7 +532,7 @@ window.MathJax = {
 </script>
 
 
-    <script src="http://localhost:1313/js/search.js"></script>
+    <script src="http://localhost:1313/portfolio/js/search.js"></script>
 
 
 
